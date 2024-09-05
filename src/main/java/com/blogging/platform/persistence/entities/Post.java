@@ -31,15 +31,17 @@ public class Post {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    private List<String> tags = new ArrayList<>();
+    private List<String> tags;
 
     public Post() {
+        tags = new ArrayList<>();
     }
 
     public Post(String title, String content, String category) {
         this.title = title;
         this.content = content;
         this.category = category;
+        tags = new ArrayList<>();
     }
 
     public Long getId() {

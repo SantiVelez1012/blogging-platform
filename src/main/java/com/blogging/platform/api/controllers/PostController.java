@@ -2,11 +2,9 @@ package com.blogging.platform.api.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blogging.platform.api.services.PostService;
@@ -27,9 +25,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping(path = "/api/posts")
 public class PostController {
 
-    @Autowired
     private PostService postService;
 
+    public PostController(PostService postService) {
+        this.postService = postService;
+    }
 
     @PostMapping("/create")
     public ResponseEntity<Post> createPost(@RequestBody PostDto post) throws BlogPostException {

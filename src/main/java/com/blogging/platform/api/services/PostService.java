@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.blogging.platform.persistence.entities.Post;
@@ -16,9 +15,11 @@ import com.blogging.platform.utils.exceptions.Causes;
 @Service
 public class PostService {
 
-
-    @Autowired
     private PostRepository postRepository;
+
+    public PostService(PostRepository postRepository){
+        this.postRepository = postRepository;
+    }
 
     public Post save(PostDto postDto){
         Post newPost = new Post( postDto.getTitle(), postDto.getContent(), postDto.getCategory() );
