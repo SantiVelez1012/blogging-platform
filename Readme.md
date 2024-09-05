@@ -1,4 +1,4 @@
-Welcome, this is my first project using Java Springboot. made for the challenge [text](https://roadmap.sh/projects/blogging-platform-api)
+Welcome, this is my first project using Java Springboot. made for the challenge [Roadmap.sh Challenge](https://roadmap.sh/projects/blogging-platform-api)
 
 To run the project, follow these steps:
 
