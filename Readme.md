@@ -6,7 +6,7 @@ To run the project, follow these steps:
 
 2. Clone the repository to your local machine using the following command:
     ```
-    git clone <repository-url>
+    git clone https://github.com/SantiVelez1012/blogging-platform.git
     ```
 
 3. Open the project in your preferred IDE.
